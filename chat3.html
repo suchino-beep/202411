@@ -83,5 +83,16 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 		initESW('https://service.force.com');
 	}
 </script>
+
+	    <p id="text">このテキストの色が変わります。</p>
+    <button onclick="changeColor()">色を変える</button>
+
+    <script>
+        function changeColor() {
+            var textElement = document.getElementById('text');
+            textElement.style.color = textElement.style.color === 'black' ? 'red' : 'black';
+        }
+    </script>
+	
 </body>
 </html>
