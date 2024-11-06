@@ -4,51 +4,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Website</title>
 
-<script type='text/javascript' src='https://c.la1-c2-it3.salesforceliveagent.com/content/g/js/62.0/deployment.js'></script>
-<script type='text/javascript'>
-liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000TWcc', '00DIT000003naAH');
-</script>
 
-<script type="text/javascript" src="https://c.la1-c2-it3.salesforceliveagent.com/content/g/js/62.0/prechat.js"></script>
-<script type="text/javascript">
-function startChat() {
-var name = document.getElementById('name').value;
-var email = document.getElementById('email').value;
-embedded_svc.settings.extraPrechatFormDetails = [{
-"label": "Name",
-"transcriptFields": ["Name__c"],
-"value": name
-}, {
-"label": "Email",
-"transcriptFields": ["Email__c"],
-"value": email
-}];
-embedded_svc.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000TWcc', '00DIT000003naAH');
-}
-</script>
 </head>
 <body>
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更3</p>
+<p>コード変更4</p>
 
-
-
-	<script type='text/javascript' src='https://c.la1-c2-it3.salesforceliveagent.com/content/g/js/62.0/deployment.js'></script>
-<script type='text/javascript'>
-liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000TWcc', '00DIT000003naAH');
-</script>
-<!-- LiveAgent chat widget code -->
-<a id="liveagent_button_online_573IT000000TWJL" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('573IT000000TWJL')">
-<!-- オンラインチャットコンテンツ -->
-</a>
-<div id="liveagent_button_offline_573IT000000TWJL" style="display: none;">
-<!-- オフラインチャットコンテンツ -->
-</div>
-
-
-	<style type='text/css'>
+<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
 		font-family: "Arial", sans-serif;
@@ -109,62 +73,6 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 	} else {
 		initESW('https://service.force.com');
 	}
-</script>
-
-	if (!window.embedded_svc) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://suchino-241029connect2-demo.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-		s.onload = function() {
-			initESW(null);
-		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
-	}
-</script>
-
-
-	
-	    <p id="text">このテキストの色が変わります。</p>
-    <button onclick="changeColor()">色を変える</button>
-
-    <script>
-        function changeColor() {
-            var textElement = document.getElementById('text');
-            textElement.style.color = textElement.style.color === 'black' ? 'red' : 'black';
-        }
-    </script>
-
-
-<h1>メールアドレス入力フォーム</h1>
-    <form id="emailForm">
-        <div class="form-group">
-            <label for="email">メールアドレス:</label>
-            <input type="email" id="email" name="email" placeholder="example@example.com" required>
-            <span class="error" id="emailError">有効なメールアドレスを入力してください。</span>
-        </div>
-        <button type="submit">送信</button>
-    </form>
-
-    <script>
-        document.getElementById('emailForm').addEventListener('submit', function(event) {
-            var emailInput = document.getElementById('email');
-            var emailError = document.getElementById('emailError');
-            if (!emailInput.checkValidity()) {
-                emailError.style.display = 'block';
-                event.preventDefault();
-            } else {
-                emailError.style.display = 'none';
-            }
-        });
-    </script>
-<form onsubmit="startChat(); return false;">
-<label for="name">名前:</label>
-<input type="text" id="name" name="name" required><br>
-<label for="email">メールアドレス:</label>
-<input type="email" id="email" name="email" required><br>
-<button type="submit">チャットを開始</button>
-</form>
-	
+</script>	
 </body>
 </html>
