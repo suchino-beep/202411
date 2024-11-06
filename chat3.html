@@ -12,8 +12,14 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更2</p>
+<p>コード変更3</p>
 
+
+
+	<script type='text/javascript' src='https://c.la1-c2-it3.salesforceliveagent.com/content/g/js/62.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000TWcc', '00DIT000003naAH');
+</script>
 <!-- LiveAgent chat widget code -->
 <a id="liveagent_button_online_573IT000000TWJL" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('573IT000000TWJL')">
 <!-- オンラインチャットコンテンツ -->
@@ -21,6 +27,8 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 <div id="liveagent_button_offline_573IT000000TWJL" style="display: none;">
 <!-- オフラインチャットコンテンツ -->
 </div>
+
+
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
@@ -37,7 +45,7 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 		embedded_svc.settings.displayHelpButton = true; //または false
 		embedded_svc.settings.language = ''; //たとえば、「en」または「en-US」を入力します
 
-		embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(エージェントがオフラインにデフォルト設定)
 
 		//embedded_svc.settings.loadingText = ''; //(読み込み中にデフォルト設定)
@@ -67,7 +75,7 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 				buttonId: '573IT000000TWJL',
 				baseLiveAgentURL: 'https://d.la1-c2-it3.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1N000000000QUAQ_161f7756989',
-				isOfflineSupportEnabled: false
+				isOfflineSupportEnabled: true
 			}
 		);
 	};
@@ -84,6 +92,8 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 	}
 </script>
 
+
+	
 	    <p id="text">このテキストの色が変わります。</p>
     <button onclick="changeColor()">色を変える</button>
 
