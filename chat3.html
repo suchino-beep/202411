@@ -10,7 +10,7 @@
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更8</p>
+<p>コード変更9</p>
 
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -18,7 +18,7 @@
 		font-family: "Arial", sans-serif;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 2px solid #005290;
+		outline: 1px solid #005290;
 	}
 </style>
 
@@ -28,7 +28,7 @@
 		embedded_svc.settings.displayHelpButton = true; //または false
 		embedded_svc.settings.language = ''; //たとえば、「en」または「en-US」を入力します
 
-		//embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
+		embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(エージェントがオフラインにデフォルト設定)
 
 		//embedded_svc.settings.loadingText = ''; //(読み込み中にデフォルト設定)
@@ -47,17 +47,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://suchino-240821-240-demo.my.salesforce.com',
-			'https://suchino-240821-240-demo.my.site.com/consumer',
+			'https://suchino-241029connect2-demo.my.salesforce.com',
+			'https://suchino-241029connect2-demo.my.site.com/b2b2c',
 			gslbBaseURL,
-			'00Da500000cW8eb',
-			'SDO_Service_Standard_Chat',
+			'00DIT000003naAH',
+			'tests',
 			{
-				baseLiveAgentContentURL: 'https://c.la11-core1.sfdc-8tgtt5.salesforceliveagent.com/content',
-				deploymentId: '572a500000OjseL',
-				buttonId: '573a5000002Kts1',
-				baseLiveAgentURL: 'https://d.la11-core1.sfdc-8tgtt5.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1N000000000QUAQ_161f7756989',
+				baseLiveAgentContentURL: 'https://c.la1-c2-it3.salesforceliveagent.com/content',
+				deploymentId: '572IT000000TWcc',
+				buttonId: '573IT000000TWJL',
+				baseLiveAgentURL: 'https://d.la1-c2-it3.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IIT000000Camj2AC_192ff8af337',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -65,7 +65,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://suchino-240821-240-demo.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://suchino-241029connect2-demo.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
@@ -74,5 +74,6 @@
 		initESW('https://service.force.com');
 	}
 </script>
+
 </body>
 </html>
