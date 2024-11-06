@@ -3,9 +3,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Website</title>
+
 <script type='text/javascript' src='https://c.la1-c2-it3.salesforceliveagent.com/content/g/js/62.0/deployment.js'></script>
 <script type='text/javascript'>
 liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000TWcc', '00DIT000003naAH');
+</script>
+
+<script type="text/javascript" src="https://c.la1c1.salesforceliveagent.com/content/g/js/62.0/prechat.js"></script>
+<script type="text/javascript">
+function startChat() {
+var name = document.getElementById('name').value;
+var email = document.getElementById('email').value;
+embedded_svc.settings.extraPrechatFormDetails = [{
+"label": "Name",
+"transcriptFields": ["Name__c"],
+"value": name
+}, {
+"label": "Email",
+"transcriptFields": ["Email__c"],
+"value": email
+}];
+embedded_svc.init('https://d.la1c1.salesforceliveagent.com/chat', '5724000000000XX', '00De000000XXXXX');
+}
 </script>
 </head>
 <body>
@@ -127,7 +146,13 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
             }
         });
     </script>
-
+<form onsubmit="startChat(); return false;">
+<label for="name">名前:</label>
+<input type="text" id="name" name="name" required><br>
+<label for="email">メールアドレス:</label>
+<input type="email" id="email" name="email" required><br>
+<button type="submit">チャットを開始</button>
+</form>
 	
 </body>
 </html>
