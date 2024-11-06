@@ -48,7 +48,7 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 </div>
 
 
-<style type='text/css'>
+	<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
 		font-family: "Arial", sans-serif;
@@ -94,10 +94,22 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
 				buttonId: '573IT000000TWJL',
 				baseLiveAgentURL: 'https://d.la1-c2-it3.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1N000000000QUAQ_161f7756989',
-				isOfflineSupportEnabled: true
+				isOfflineSupportEnabled: false
 			}
 		);
 	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://suchino-241029connect2-demo.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
