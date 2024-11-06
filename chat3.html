@@ -103,6 +103,31 @@ liveagent.init('https://d.la1-c2-it3.salesforceliveagent.com/chat', '572IT000000
             textElement.style.color = textElement.style.color === 'black' ? 'red' : 'black';
         }
     </script>
+
+
+<h1>メールアドレス入力フォーム</h1>
+    <form id="emailForm">
+        <div class="form-group">
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            <span class="error" id="emailError">有効なメールアドレスを入力してください。</span>
+        </div>
+        <button type="submit">送信</button>
+    </form>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            var emailInput = document.getElementById('email');
+            var emailError = document.getElementById('emailError');
+            if (!emailInput.checkValidity()) {
+                emailError.style.display = 'block';
+                event.preventDefault();
+            } else {
+                emailError.style.display = 'none';
+            }
+        });
+    </script>
+
 	
 </body>
 </html>
