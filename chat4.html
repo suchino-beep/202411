@@ -14,15 +14,7 @@
 
 //メールアドレスに関するコード
     <h1>メールアドレス入力フォーム</h1>
-<form id="prechatForm">
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName"><br><br>
-    <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName"><br><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
-    <input type="submit" value="Start Chat">
-</form>
+
 
 // チャットに関するコード
 <style type='text/css'>
@@ -48,7 +40,7 @@
 		embedded_svc.settings.displayHelpButton = true; //または false
 		embedded_svc.settings.language = ''; //たとえば、「en」または「en-US」を入力します
 		embedded_svc.settings.extraPrechatFormDetails = [{"label":"Email","value": "suchino@salesforce.com" ,"transcriptFields": ["Email__c"]}];
-		embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps": [{"doCreate": false,"doFind": true,"fieldName": "Email","isExactMatch": true,"label": "Email"}],"entityName": "Contact","saveToTranscript":"ContactId"}];
+		//embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps": [{"doCreate": false,"doFind": true,"fieldName": "Email","isExactMatch": true,"label": "Email"}],"entityName": "Contact","saveToTranscript":"ContactId"}];
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(エージェントがオフラインにデフォルト設定)
