@@ -10,7 +10,7 @@
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更88</p>
+<p>コード変更87</p>
 
 //メールアドレスに関するコード
     <h1>メールアドレス入力フォーム</h1>
@@ -59,23 +59,8 @@
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-
-		embedded_svc.init(
-			'https://suchino-241107-992-demo.my.salesforce.com',
-			'https://suchino-241107-992-demo.my.site.com/napili',
-			gslbBaseURL,
-			'00DGB000003WnP8',
-			'LEX_LiveAgent_for_Napili',
-			{
-				baseLiveAgentContentURL: 'https://c.la1-c1-hn3.salesforceliveagent.com/content',
-				deploymentId: '572GB000000HT0U',
-				buttonId: '573GB000000HU5l',
-				baseLiveAgentURL: 'https://d.la1-c1-hn3.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I10000000XZdlEAG_168a73a473e',
-				isOfflineSupportEnabled: false
-			}
-		);
-		            // トランスクリプトにメールアドレスを追加する処理
+		
+		// トランスクリプトにメールアドレスを追加する処理
             embedded_svc.settings.extraPrechatFormDetails = [{
                 "label": "Email",
                 "value": "suchino@salesforce.com",
@@ -93,6 +78,23 @@
                 }],
                 "entityName": "Contact"
             }];
+
+		embedded_svc.init(
+			'https://suchino-241107-992-demo.my.salesforce.com',
+			'https://suchino-241107-992-demo.my.site.com/napili',
+			gslbBaseURL,
+			'00DGB000003WnP8',
+			'LEX_LiveAgent_for_Napili',
+			{
+				baseLiveAgentContentURL: 'https://c.la1-c1-hn3.salesforceliveagent.com/content',
+				deploymentId: '572GB000000HT0U',
+				buttonId: '573GB000000HU5l',
+				baseLiveAgentURL: 'https://d.la1-c1-hn3.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I10000000XZdlEAG_168a73a473e',
+				isOfflineSupportEnabled: false
+			}
+		);
+
 	};
 
 	if (!window.embedded_svc) {
