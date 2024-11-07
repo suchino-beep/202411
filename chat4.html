@@ -10,15 +10,26 @@
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更87</p>
+<p>コード変更86</p>
 
 //メールアドレスに関するコード
     <h1>メールアドレス入力フォーム</h1>
-<form id="prechatForm">
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">送信</button>
-    </form>
+<form method="post" action="#">
+<label>First Name: </label> <input type='text' name='liveagent.prechat:ContactFirstName' /><br />
+<label>Last Name: </label> <input type='text' name='liveagent.prechat:ContactLastName' /><br />
+<label>Subject: </label> <input type='text' name='liveagent.prechat:CaseSubject' /><br />
+<input type="hidden" name="liveagent.prechat:CaseStatus" value="New" /><br />
+<input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,ContactFirstName;LastName,ContactLastName" />
+<input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="FirstName,true;LastName,true" />
+<input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="FirstName,true;LastName,true" />
+<input type="hidden" name="liveagent.prechat.findorcreate.map.doCreate:Contact" value="FirstName,true;LastName,true" />
+<input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="ContactId" />
+<input type="hidden" name="liveagent.prechat.findorcreate.showOnCreate:Contact" value="true" />
+<input type="hidden" name="liveagent.prechat.findorcreate.linkToEntity:Contact" value="Case,ContactId" />
+<input type="hidden" name="liveagent.prechat.findorcreate.map:Case" value="Subject,CaseSubject;Status,CaseStatus" />
+<input type="hidden" name="liveagent.prechat.findorcreate.map.doCreate:Case" value="Subject,true;Status,true" />
+<input type="submit" value="Submit" />
+</form>
 
 // チャットに関するコード
 <style type='text/css'>
