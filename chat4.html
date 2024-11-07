@@ -10,14 +10,18 @@
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更76</p>
+<p>コード変更75</p>
 
 //メールアドレスに関するコード
     <h1>メールアドレス入力フォーム</h1>
-<form method="post" action="#">
-<label>First Name: </label> <input type='text' name='liveagent.prechat:ContactFirstName' /><br />
-<label>Last Name: </label> <input type='text' name='liveagent.prechat:ContactLastName' /><br />
-<label>EMail: </label> <input type='text' id='input_Email' name='Email' />
+<form id="prechatForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="Start Chat">
 </form>
 
 // チャットに関するコード
@@ -44,7 +48,7 @@
 		embedded_svc.settings.displayHelpButton = true; //または false
 		embedded_svc.settings.language = ''; //たとえば、「en」または「en-US」を入力します
 		embedded_svc.settings.extraPrechatFormDetails = [{"label":"Email","value": "suchino@salesforce.com" ,"transcriptFields": ["Email__c"]}];
-		embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps": [{"doCreate": false,"doFind": true,"fieldName": "Email","isExactMatch": true,"label": "Email"}],"entityName": "Contact"}];
+		embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps": [{"doCreate": false,"doFind": true,"fieldName": "Email","isExactMatch": true,"label": "Email"}],"entityName": "Contact","saveToTranscript":"ContactId"}];
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(エージェントがオフラインにデフォルト設定)
