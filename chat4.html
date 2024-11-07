@@ -10,7 +10,7 @@
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更91</p>
+<p>コード変更90</p>
 
 //メールアドレスに関するコード
     <h1>メールアドレス入力フォーム</h1>
@@ -19,18 +19,6 @@
         <input type="email" id="email" name="email" required>
         <button type="submit">送信</button>
     </form>
-<script>
-        document.getElementById('prechatForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var email = document.getElementById('email').value;
-
-
-
-            console.log('メールアドレスがトランスクリプトに追加されました:', email);
-        });
-    </script>
-
-
 
 // チャットに関するコード
 <style type='text/css'>
@@ -90,7 +78,7 @@
 		            // トランスクリプトにメールアドレスを追加する処理
             embedded_svc.settings.extraPrechatFormDetails = [{
                 "label": "Email",
-                "value": email,
+                "value": document.getElementById('email').value,
                 "displayToAgent": true
             }];
 
