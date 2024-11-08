@@ -10,7 +10,7 @@
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更61</p>
+<p>コード変更60</p>
 
 //メールアドレスに関するコード
     <h1>メールアドレス入力フォーム</h1>
@@ -39,13 +39,13 @@
 	//var var_email =""
 	//var var_email ="suchino@salesforce.com"
 	//var var_email = document.getElementById("input_Email").value;
-	console.log(var_email);
-	//var var_email =input_Email_value.value;
+	console.log(emailInput);
+	var var_email =emailInput.value;
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //または false
 		embedded_svc.settings.language = ''; //たとえば、「en」または「en-US」を入力します
-		embedded_svc.settings.extraPrechatFormDetails = [{"label":"Email","value": var_email ,"transcriptFields": ["Email__c"]}];
-		embedded_svc.settings.extraPrechatInfo = [{"entityName": "Contact",  "linkToEntityName": "Contact",  "linkToEntityField": "Id","saveToTranscript":"ContactId","entityFieldMaps": [{"doCreate": false,"doFind": true,"fieldName": "Email","isExactMatch": true,"label": "Email"}]}];
+		//embedded_svc.settings.extraPrechatFormDetails = [{"label":"Email","value": var_email ,"transcriptFields": ["Email__c"]}];
+		//embedded_svc.settings.extraPrechatInfo = [{"entityName": "Contact",  "linkToEntityName": "Contact",  "linkToEntityField": "Id","saveToTranscript":"ContactId","entityFieldMaps": [{"doCreate": false,"doFind": true,"fieldName": "Email","isExactMatch": true,"label": "Email"}]}];
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(エージェントがオフラインにデフォルト設定)
@@ -96,12 +96,8 @@
 		  // 入力フィールドのblurイベントでextraPrechatFormDetailsを更新
 		  emailInput.addEventListener("blur", () => {
       			const email = emailInput.value;
-      			embedded_svc.settings.extraPrechatFormDetails = [
-          		{
-              "label": "Email",
-              "value": email,
-              "transcriptFields": ["Email__c"]
-          }
+      			embedded_svc.settings.extraPrechatFormDetails = [{"label": "Email","value": var_email,"transcriptFields": ["Email__c"]}
+			embedded_svc.settings.extraPrechatInfo = [{"entityName": "Contact",  "linkToEntityName": "Contact",  "linkToEntityField": "Id","saveToTranscript":"ContactId","entityFieldMaps": [{"doCreate": false,"doFind": true,"fieldName": "Email","isExactMatch": true,"label": "Email"}]}];
       ];
       console.log("プレチャットインフォが更新されました: " + email);
   });
