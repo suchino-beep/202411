@@ -10,7 +10,7 @@
 <!-- Your existing content here -->
 <h1>これは適当なHTMLです</h1>
 <p>この段落には適当な文字列が含まれています。</p>
-<p>コード変更60</p>
+<p>コード変更59</p>
 
 //メールアドレスに関するコード
     <h1>メールアドレス入力フォーム</h1>
@@ -96,9 +96,8 @@
 		  // 入力フィールドのblurイベントでextraPrechatFormDetailsを更新
 		  emailInput.addEventListener("blur", () => {
       			const email = emailInput.value;
-      			embedded_svc.settings.extraPrechatFormDetails = [{"label": "Email","value": var_email,"transcriptFields": ["Email__c"]}
+      			embedded_svc.settings.extraPrechatFormDetails = [{"label": "Email","value": var_email,"transcriptFields": ["Email__c"]}];
 			embedded_svc.settings.extraPrechatInfo = [{"entityName": "Contact",  "linkToEntityName": "Contact",  "linkToEntityField": "Id","saveToTranscript":"ContactId","entityFieldMaps": [{"doCreate": false,"doFind": true,"fieldName": "Email","isExactMatch": true,"label": "Email"}]}];
-      ];
       console.log("プレチャットインフォが更新されました: " + email);
   });
 
