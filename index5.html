@@ -1,0 +1,43 @@
+<html lang="jp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
+
+
+</head>
+<body>
+<!-- Your existing content here -->
+<h1>チャット運用テスト</h1>
+<p>チャット運用テスト</p>
+<p>コード変更v0.1</p>
+
+
+    <button id="openChatButton">チャットを起動</button>
+
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'ja'; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    '00DIT000003naAH',
+                    'MIAWtest',
+                    'https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795',
+                    {
+                        scrt2URL: 'https://suchino-241029connect2-demo.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+
+        document.getElementById('openChatButton').addEventListener('click', function() {
+            window.open('https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795', '_blank', 'width=400,height=600');
+        });
+    </script>
+    <script type='text/javascript' src='https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+</html>
