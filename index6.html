@@ -18,6 +18,21 @@
 					scrt2URL: 'https://suchino-241029connect2-demo.my.salesforce-scrt.com'
 				}
 			);
+
+			  embeddedservice_bootstrap.utilAPI
+			  .launchChat()
+			  .then(function (success) {
+			    // Add actions to run after the chat client launches successfully.
+			  })
+			  .catch(function (error) {
+			    // Add actions to run after the chat client launch fails.
+			  })
+			  .finally(function () {
+			    // Add actions to run whether the chat client launches
+			    // successfully or not.
+			  });
+
+			
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
 		}
@@ -25,43 +40,8 @@
 </script>
 <script type='text/javascript' src='https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        launchChat();
-    });
 
-    function launchChat() {
-        embeddedservice_bootstrap.utilAPI.launchChat()
-            .then(() => {
-                // Success handler used to perform actions
-                // when the chat client launches successfully.
-                // For example, create a method that disables the launch chat button.
-                disableLaunchChatButton();
-            }).catch(() => {
-                // Error handler used to perform actions
-                // if the chat client fails to launch.
-                // For example, create a method that hides the launch chat button.
-                hideLaunchChatButton();
-            }).finally(() => {
-                // Finally handler used to perform any clean-up actions
-                // regardless of whether the chat client launches successfully or not.
-                // For example, create a method that logs the user's attempt to chat.
-                logEndUserAttemptToChat();
-            });
-    }
 
-    function disableLaunchChatButton() {
-        // Implement your logic to disable the button
-    }
-
-    function hideLaunchChatButton() {
-        // Implement your logic to hide the button
-    }
-
-    function logEndUserAttemptToChat() {
-        // Implement your logic to log the attempt
-    }
-</script>
 
 </body>
 </html>
