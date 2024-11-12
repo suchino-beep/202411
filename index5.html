@@ -1,28 +1,9 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>チャット起動ボタン0.6</title>
-    <script type="text/javascript">
-        function initEmbeddedMessaging() {
-            try {
-                embeddedservice_bootstrap.settings.language = 'ja'; // For example, enter 'en' or 'en-US'
-
-                embeddedservice_bootstrap.init(
-                    '00DIT000003naAH',
-                    'MIAWtest',
-                    'https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795',
-                    {
-                        scrt2URL: 'https://suchino-241029connect2-demo.my.salesforce-scrt.com'
-                    }
-                );
-            } catch (err) {
-                console.error('Error loading Embedded Messaging: ', err);
-            }
-        }
-    </script>
-    <script type="text/javascript" src="https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()"></script>
+    <title>チャット起動ボタン0.7</title>
 </head>
 <body>
-    <button onclick="window.open('https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795', '_blank', 'width=800,height=600')">チャットを起動</button>
+    <button onclick="window.open('index6.html', '_blank', 'width=800,height=600')">チャットを起動0.7</button>
 </body>
 </html>
