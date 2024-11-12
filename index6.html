@@ -4,7 +4,7 @@
     <title>チャット0.8</title>
 </head>
 <body>
-    <h1>チャットが開始されます...</h1>
+    <h1>チャットが開始されます...0.9</h1>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -19,18 +19,8 @@
 				}
 			);
 
-			  embeddedservice_bootstrap.utilAPI
-			  .launchChat()
-			  .then(function (success) {
-			    // Add actions to run after the chat client launches successfully.
-			  })
-			  .catch(function (error) {
-			    // Add actions to run after the chat client launch fails.
-			  })
-			  .finally(function () {
-			    // Add actions to run whether the chat client launches
-			    // successfully or not.
-			  });
+window.addEventListener("load", (e) => {window.setTimeout(()=>{
+embeddedservice_bootstrap.utilAPI.launchChat()},1000)});
 
 			
 		} catch (err) {
@@ -40,7 +30,9 @@
 </script>
 <script type='text/javascript' src='https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
+<script>
 
+</script>
 
 
 </body>
