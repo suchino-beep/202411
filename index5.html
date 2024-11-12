@@ -1,87 +1,28 @@
-<html lang="jp">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Website</title>
-
-
-</head>
-<body>
-<p>コード0.4</p>
-
-  <button id="openChatButton">チャットを起動</button>
-<script type='text/javascript'>
-function initEmbeddedMessaging() {
-try {
-embeddedservice_bootstrap.settings.language = 'ja'; // For example, enter 'en' or 'en-US'
-embeddedservice_bootstrap.init(
-'00DIT000003naAH',
-'MIAWtest',
-'https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795',
-{
-scrt2URL: 'https://suchino-241029connect2-demo.my.salesforce-scrt.com'
-}
-);
-// チャットボタンを非表示にする
-embeddedservice_bootstrap.utilAPI.hideChatButton();
-} catch (err) {
-console.error('Error loading Embedded Messaging: ', err);
-}
-};
-document.getElementById('openChatButton').addEventListener('click', function() {
-// 新しいウィンドウを開く
-var chatWindow = window.open('', '_blank', 'width=400,height=600');
-// 新しいウィンドウでチャットを初期化
-chatWindow.document.write(`
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Salesforce Chat</title>
+    <meta charset="UTF-8">
+    <title>チャット起動ボタン0.6</title>
+    <script type="text/javascript">
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'ja'; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    '00DIT000003naAH',
+                    'MIAWtest',
+                    'https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795',
+                    {
+                        scrt2URL: 'https://suchino-241029connect2-demo.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()"></script>
 </head>
 <body>
-<script type='text/javascript'>
-function initEmbeddedMessaging() {
-try {
-embeddedservice_bootstrap.settings.language = 'ja'; // For example, enter 'en' or 'en-US'
-embeddedservice_bootstrap.init(
-'00DIT000003naAH',
-'MIAWtest',
-'https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795',
-{
-scrt2URL: 'https://suchino-241029connect2-demo.my.salesforce-scrt.com'
-}
-);
-// チャットを起動
-embeddedservice_bootstrap.utilAPI
-.launchChat()
-.then(function (success) {
-// Add actions to run after the chat client launches successfully.
-})
-.catch(function (error) {
-// Add actions to run after the chat client launch fails.
-})
-.finally(function () {
-// Add actions to run whether the chat client launches successfully or not.
-});
-} catch (err) {
-console.error('Error loading Embedded Messaging: ', err);
-}
-};
-// チャット初期化を呼び出す
-initEmbeddedMessaging();
-</script>
-<script type='text/javascript' src='https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js'></script>
+    <button onclick="window.open('https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795', '_blank', 'width=800,height=600')">チャットを起動</button>
 </body>
-</html>
-`);
-});
-// 初期化を呼び出す
-initEmbeddedMessaging();
-</script>
-<script type='text/javascript' src='https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js'></script>
-
-
-  
-</body>
-
 </html>
