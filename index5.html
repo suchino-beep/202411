@@ -12,7 +12,6 @@
 <p>チャット運用テスト</p>
 <p>コード変更v0.1</p>
 
-
     <button id="openChatButton">チャットを起動</button>
 
     <script type='text/javascript'>
@@ -34,10 +33,9 @@
         };
 
         document.getElementById('openChatButton').addEventListener('click', function() {
+            initEmbeddedMessaging();
             window.open('https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795', '_blank', 'width=400,height=600');
         });
     </script>
-    <script type='text/javascript' src='https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
-</body>
-</html>
+    <script type='text/javascript' src='https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js'></script>
+</body></html>
