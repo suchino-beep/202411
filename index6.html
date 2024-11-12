@@ -25,10 +25,11 @@
 </script>
 <script type='text/javascript' src='https://suchino-241029connect2-demo.my.site.com/ESWMIAWtest1731397110795/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-    <button id="launchChatButton" onclick="launchChat()">Click to contact support</button>
-
-// Call Launch Chat API.
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        launchChat();
+    });
+
     function launchChat() {
         embeddedservice_bootstrap.utilAPI.launchChat()
             .then(() => {
@@ -44,9 +45,21 @@
             }).finally(() => {
                 // Finally handler used to perform any clean-up actions
                 // regardless of whether the chat client launches successfully or not.
-                // For example, create a method that logs the user’s attempt to chat.
+                // For example, create a method that logs the user's attempt to chat.
                 logEndUserAttemptToChat();
             });
+    }
+
+    function disableLaunchChatButton() {
+        // Implement your logic to disable the button
+    }
+
+    function hideLaunchChatButton() {
+        // Implement your logic to hide the button
+    }
+
+    function logEndUserAttemptToChat() {
+        // Implement your logic to log the attempt
     }
 </script>
 
